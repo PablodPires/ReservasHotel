@@ -7,8 +7,9 @@
 
 	<ui:composition template="/estrutura.xhtml">
 	
+	<ui:param name="titulo" value="Minha Primeira página JSF"></ui:param>
 	<h1> Meu primeiro exemplo jsp</h1>
-	<ui:define name="titulo">Minha primeira página jsf ... Facelets</ui:define>
+	
 	
 	Sabe o que o beam tem a dizer?
 	<h:outputText value="#{meuPrimeiroBean.olá}" rendered="#{meuPrimeiroBean.exibir}" escape="false" /> 
