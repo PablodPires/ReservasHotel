@@ -14,7 +14,7 @@ import modelo.Pessoa;
 import modelo.PessoaFisica;
 import modelo.PessoaJuridica;
 import modelo.Sexo;
-
+// Modificando a classe
 @ManagedBean
 @SessionScoped
 public class CadastroPessoasBean {
@@ -42,7 +42,7 @@ public class CadastroPessoasBean {
 	public void criar() {
 		FacesContext contexto = FacesContext.getCurrentInstance();
 		if (tipoNovaPessoa == null) {
-			contexto.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Você deve especificar o tipo", ""));
+			contexto.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "VocÃª deve especificar o tipo", ""));
 			return;
 		}
 		
@@ -60,7 +60,7 @@ public class CadastroPessoasBean {
 			lista.add(pessoaSelecionada);
 		}
 		FacesContext contexto = FacesContext.getCurrentInstance();
-		contexto.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Edição efetuada com sucesso!", ""));
+		contexto.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "EdiÃ§Ã£o efetuada com sucesso!", ""));
 	}
 	
 	public String cancelar() {
@@ -99,7 +99,7 @@ public class CadastroPessoasBean {
 		this.tipoNovaPessoa = tipoNovaPessoa;
 	}
 	
-	// Métodos getters de atributos inexistentes
+	// MÃ©todos getters de atributos inexistentes
 	public Sexo[] getSexos() {
 		return Sexo.values();
 	}
