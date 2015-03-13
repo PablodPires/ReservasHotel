@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+	<ui:composition template="/estrutura.xhtml">
+	
+	<h1> Meu primeiro exemplo jsp</h1>
+	<ui:define name="titulo">Minha primeira página jsf ... Facelets</ui:define>
+	
+	Sabe o que o beam tem a dizer?
+	<h:outputText value="#{meuPrimeiroBean.olá}" rendered="#{meuPrimeiroBean.exibir}" escape="false" /> 
+	<h:form>
+		Vamos exibir o que o bean tem a dizer?
+		<h:selectBooleanCheckbox value="#{meuPrimeiroBean.exibir}" />
+		<h:commandLink value="Enviar"/>
+		link para especializa
+		<h:outputLink value="http://www.especializa.com.br/java"> Cursos de java na especializa</h:outputLink>
+		Usando a tag link
+		<h:link outcome="castropessoas.jsf" value="Chamando o cadastro de pessoa"/>
+	</h:form>
+    </ui:composition>
+</html>

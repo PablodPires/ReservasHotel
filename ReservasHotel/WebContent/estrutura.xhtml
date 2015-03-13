@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h:head>
+	<title><ui:insert name="titulo">Um título que vai ser modifivado</ui:insert></title>
+   
+    <style>
+			@IMPORT url("estilo.css");
+    </style>
+    
+</h:head>
+
+<h:body>
+	<div id="topo"></div>
+			<h:graphicImage name="especializa.jpg" library="imagens" />
+	<div id="conteudo">
+			<div id="esquerda">
+			   <ui:include src="/menu.xhtml"></ui:include>
+			</div>
+			<div id="direita"><ui:insert name="direita">O que vem do lado direito</ui:insert></div>
+			<div id="centro"><ui:insert>O que vem no centro</ui:insert></div>
+	</div>
+	<div id="rodape"></div>
+            <strong>Especializa Treinamentos</strong><br/>
+            +55 81 3465.0032
+</h:body>
+
+
+
+
+
+</html>
