@@ -9,6 +9,10 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.event.AjaxBehaviorEvent;
+import javax.faces.event.ValueChangeEvent;
+
+import java.util.logging.Logger;
 
 import modelo.Pessoa;
 import modelo.PessoaFisica;
@@ -110,6 +114,14 @@ public class CadastroPessoasBean {
 
 	public boolean isPessoaJuridicaSelecionada() {
 		return pessoaSelecionada instanceof PessoaJuridica;
+	}
+	
+	public void ouvinteAjax (AjaxBehaviorEvent event){
+		Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).info("AJAX" +event.getPhaseId());
+	}
+	
+	public void ouvinteAjax (ValueChangeEvent event){
+		Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).info("AJAX VALUE CHANGE");
 	}
 
 }

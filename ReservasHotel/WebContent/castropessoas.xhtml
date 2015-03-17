@@ -40,7 +40,9 @@
   			<h:panelGrid columns="3">
   				<f:facet name="header">Dados gerais</f:facet>
 	  			<h:outputLabel for="nome" value="Nome"/>
-	  			<h:inputText id="nome" value="#{cadastroPessoasBean.pessoaSelecionada.nome}" />
+	  			<h:inputText id="nome"  valueChangeListener="#{cadastroPessoasBean.ouvinteAjax}" onvalue="#{cadastroPessoasBean.pessoaSelecionada.nome}" >
+	  			<f:ajax event="keyup" listener="#{cadastroPessoasBean.ouvinteAjax}"/>
+	  			</h:inputText>
 	  			<h:message for="nome"/>
 
 	  			<h:outputLabel value="Email" for="email" />
